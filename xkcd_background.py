@@ -7,5 +7,4 @@ file_contents = json_file.read()
 as_json = json.loads(file_contents)
 img_uri = as_json['img']
 cmd = "gsettings gnome.org.desktop.background picture-uri " + img_uri
-print "running", cmd
 subprocess.call(cmd)
