@@ -10,5 +10,5 @@ as_json = json.loads(file_contents)
 img_url = str(as_json['img'])
 download = ["wget", img_url, "-O", "/home/peter/.wallpaper.png"]
 subprocess.call(download)
-cmd = ["gsettings","set" , "org.gnome.desktop.background",  "picture-uri", "file:///home/peter/.wallpaper.png"]
+cmd = ['feh', '--bg-max', '/home/peter/.wallpaper.png']
 subprocess.call(cmd)
